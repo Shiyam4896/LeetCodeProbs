@@ -1,8 +1,5 @@
-/**
- * @param {string} s
- * @return {number}
- */
-var romanToInt = function(s) {
+var romanToInt = function(s) 
+{
       const sym = {
         'I': 1,
         'V': 5,
@@ -15,14 +12,17 @@ var romanToInt = function(s) {
 
     let result = 0;
 
-    for (let i = 0; i < s.length; i++) {
+    for (let i = 0; i < s.length; i++) 
+    {
         const cur = sym[s[i]];
         const next = sym[s[i + 1]];
 
-        if (cur < next) {
+        if (cur < next) 
+        {
             result += next - cur;
             i++;
-        } else {
+        } 
+        else {
             result += cur;
         }
     }
